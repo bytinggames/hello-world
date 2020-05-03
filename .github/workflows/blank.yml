@@ -26,4 +26,4 @@ jobs:
       run: msbuild GitHubActionsTest/GitHubActionsTest.sln
       
     - name: Testing
-      run: dotnet test
+      run: dotnet test GitHubActionsTest/GitHubActionsTest.sln
