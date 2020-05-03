@@ -12,11 +12,9 @@ jobs:
     steps:
     
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 2.2.108
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
-    - name: And then we test it
-      run dotnet test --verbosity normal
+      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Build the Solution
+      run: msbuild GitHubActionsTest/GitHubActionsTest.sln
