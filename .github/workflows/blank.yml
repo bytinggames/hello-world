@@ -1,5 +1,5 @@
 
-name: BuildAndTest.NetFramework.CI
+name: CI
 
 on:
   push:
